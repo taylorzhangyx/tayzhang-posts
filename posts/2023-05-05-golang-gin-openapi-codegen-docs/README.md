@@ -22,7 +22,7 @@ ML Platform | MLOps | Big Data | Data Intensive Distributed System
 
 Find Me: taylorzyx@hotmail.com
 
-[LinkedIn](https://www.linkedin.com/in/yxzh/) | [Blog](https://taylorzyx.hashnode.dev/) | \[Github\](https://github.com/taylorzh
+[LinkedIn](https://www.linkedin.com/in/yxzh/) | [Blog](https://taylorzyx.hashnode.dev/) | \[Github](https://github.com/taylorzhangyx
 
 ---
 
@@ -80,13 +80,13 @@ The OpenAPI Specification helps improve the quality and consistency of API desig
 
 [openapi-codegen-go](https://github.com/taylorzhangyx/openapi-codegen-go) provides a runnable example that combines OpenAPI 3.0, oapi-codegen, and widdershins. It generates code that can be directly run on the [gin](https://github.com/gin-gonic/gin) framework, as well as client-side code and API documentation, through simple commands.
 
-[![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683280664488/ff33d744-a547-4c3a-a83a-7993298287a2.png align="center")](https://github.com/taylorzhangyx/openapi-codegen-go)
+[![](./img/img-001.png)](https://github.com/taylorzhangyx/openapi-codegen-go)
 
 ### Custom Templates
 
 By simply modifying the template, Chinese documentation output is achieved: [Custom Chinese Template](https://github.com/taylorzhangyx/openapi-codegen-go/commit/717d38b52fa500d5300a74f0afa21a885e645acf)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683280692137/4e118d07-23f0-4a58-a7f1-89e73cb1e565.png align="center")
+![](./img/img-002.png)
 
 ### Development Environment Debugging Plugins
 
@@ -99,11 +99,11 @@ The OpenAPI ecosystem is robust, with plugins available for multiple IDEs that c
 
 As shown below, you can directly open the OpenAPI definition file within the IDE using a plugin and debug the API interfaces seamlessly. <mark>This integrated approach makes it easier for developers to test, modify, and refine their APIs without leaving their preferred development environment.</mark>
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683280716541/7a7f98fd-fdec-4eb5-97a3-fb2c740450c6.png align="center")
+![](./img/img-003.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683280727276/a804e85e-f84b-4ae8-b5ef-13e43655b445.png align="center")
+![](./img/img-004.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683280734984/f38863ed-476b-4633-8503-145f399ac67f.png align="center")
+![](./img/img-005.png)
 
 ---
 

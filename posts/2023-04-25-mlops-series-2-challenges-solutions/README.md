@@ -33,13 +33,13 @@ taylorzyx@hotmail.com
 
 # 机器学习工程全生命周期剖析
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682407916791/8e84a869-69f3-42f3-94dd-8e41223bc7bf.png align="left")
+![](./img/img-001.png)
 
 上一篇文章中（[【MLOps 系列 1】MLOps 起源 - When, What, and Why-机器学习建模全生命周期介绍](https://taylorzyx.hashnode.dev/mlops-origin-when-what-and-why)）我们介绍到，机器学习全流程简单来说可以分为三个部分：<mark>1.分析与理解业务场景及业务数据，2.选择和构建机器学习数据及模型，3.部署及维护机器学习模型服务</mark>。
 
 而在实际生产当中，事情往往不是我们想象中的那么简单。如果我们把这张环状图拆开来细看，会得到如下更详细的图：
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682407922448/7607b457-d43d-4ff7-977d-eb855614d326.png align="left")
+![](./img/img-002.png)
 
 这个图中详细描绘了机器学习全流程当中工程实践部分的的详细阶段和步骤。
 
@@ -87,17 +87,17 @@ taylorzyx@hotmail.com
 
 从刚才的介绍可以看到，机器学习是一个极度复杂又多变的系统性工程。其中涉及到多种资产和多个团队的紧密配合，而每个环节都面临着多种挑战。
 
-<details data-node-type="hn-details-summary"><summary>人员组织管理</summary><div data-type="detailsContent">整个流程由多个团队共同负责，其中每个人员的职责边界，上下游之间的交接方式以及中间信息传递的准确程度都是很大的挑战。而流程中的责任归属又是实际执行中的另一大管理上的挑战。</div></details><details data-node-type="hn-details-summary"><summary>人员组织管理</summary><div data-type="detailsContent">整个流程由多个团队共同负责，其中每个人员的职责边界，上下游之间的交接方式以及中间信息传递的准确程度都是很大的挑战。而流程中的责任归属又是实际执行中的另一大管理上的挑战。</div></details><details data-node-type="hn-details-summary"><summary>重复劳动与资源复用</summary><div data-type="detailsContent">整个流程中涉及到大量的手动工作量和中间结果的产生，例如算法代码，特征提取，数据变换，实验模型。无论是产出的结果还是加工过程，都在很大程度上能够被复用。然而在现有执行的过程中，因为不同的业务场景由不同的团队负责，造成知识孤岛，即使相同的逻辑也会被重新实现，而导致重复劳动。</div></details><details data-node-type="hn-details-summary"><summary>产品质量和检验标准</summary><div data-type="detailsContent">数据质量和模型质量是导致最终产品质量的直接因素。如果数据源不稳定，数据采集流程不规范不完整，采集到的数据波动大结构不合理，后续数据检验或者模型检验方法和实际的不匹配，则会对产出的结果造成挑战。</div></details><details data-node-type="hn-details-summary"><summary>配套组件和代码管理</summary><div data-type="detailsContent">模型投产时不仅涉及到模型的上线，对模型相关的配套设施也需要同步更新。此时就会遇到到牵一发而动全身的问题，跟随新模型发布的有工程代码，接口协议，数据格式，数据版本，配置信息和机器信息。其中任何一环出错就会导致运行异常。而模型一旦出现异常和漏洞需要立即回滚的时候，其对整个系统的回滚要求就显得异常严格。</div></details><details data-node-type="hn-details-summary"><summary>服务稳定性与可观测性</summary><div data-type="detailsContent">线上服务存在着流量无法预测的问题，而过高的瞬时流量会导致服务的高延时甚至宕机。模型服务因为其复杂的特性有可能存在各种逻辑依赖和文件依赖，在高峰流量到达时及时的扩容成为不小的挑战。而这种工程问题是一般机器学习工程师不善于解决的。</div></details><details data-node-type="hn-details-summary"><summary>过程追踪与问题排查</summary><div data-type="detailsContent">一旦系统出现问题，工程师就需要排查与解决。因为机器学习的独特性，其问题的所在不仅可能出现在代码中，还有可能是因为数据质量，模型结构以及运行环境。此时如果丢失了模型与原始数据与加工过程的信息，过程中产生的失误和问题就无从排查。</div></details><details data-node-type="hn-details-summary"><summary>安全合规</summary><div data-type="detailsContent">很多行业中，信息是敏感资产，不管是线下训练数据还是线上推理数据，需要通过使用各种访问权限加以控制。而模型作为数据加工后的结果，天然携带数据的属性，极有可能通过使用模型来反推出数据内容。而模型的上线又有各种规范的约束，如果加工过程中缺乏合规意识，合规流程不完善，会导致产生的模型结果无法通过验证，导致推倒重来，所有努力付之东流。</div></details>
+<details><summary>人员组织管理</summary><div>整个流程由多个团队共同负责，其中每个人员的职责边界，上下游之间的交接方式以及中间信息传递的准确程度都是很大的挑战。而流程中的责任归属又是实际执行中的另一大管理上的挑战。</div></details><details><summary>人员组织管理</summary><div>整个流程由多个团队共同负责，其中每个人员的职责边界，上下游之间的交接方式以及中间信息传递的准确程度都是很大的挑战。而流程中的责任归属又是实际执行中的另一大管理上的挑战。</div></details><details><summary>重复劳动与资源复用</summary><div>整个流程中涉及到大量的手动工作量和中间结果的产生，例如算法代码，特征提取，数据变换，实验模型。无论是产出的结果还是加工过程，都在很大程度上能够被复用。然而在现有执行的过程中，因为不同的业务场景由不同的团队负责，造成知识孤岛，即使相同的逻辑也会被重新实现，而导致重复劳动。</div></details><details><summary>产品质量和检验标准</summary><div>数据质量和模型质量是导致最终产品质量的直接因素。如果数据源不稳定，数据采集流程不规范不完整，采集到的数据波动大结构不合理，后续数据检验或者模型检验方法和实际的不匹配，则会对产出的结果造成挑战。</div></details><details><summary>配套组件和代码管理</summary><div>模型投产时不仅涉及到模型的上线，对模型相关的配套设施也需要同步更新。此时就会遇到到牵一发而动全身的问题，跟随新模型发布的有工程代码，接口协议，数据格式，数据版本，配置信息和机器信息。其中任何一环出错就会导致运行异常。而模型一旦出现异常和漏洞需要立即回滚的时候，其对整个系统的回滚要求就显得异常严格。</div></details><details><summary>服务稳定性与可观测性</summary><div>线上服务存在着流量无法预测的问题，而过高的瞬时流量会导致服务的高延时甚至宕机。模型服务因为其复杂的特性有可能存在各种逻辑依赖和文件依赖，在高峰流量到达时及时的扩容成为不小的挑战。而这种工程问题是一般机器学习工程师不善于解决的。</div></details><details><summary>过程追踪与问题排查</summary><div>一旦系统出现问题，工程师就需要排查与解决。因为机器学习的独特性，其问题的所在不仅可能出现在代码中，还有可能是因为数据质量，模型结构以及运行环境。此时如果丢失了模型与原始数据与加工过程的信息，过程中产生的失误和问题就无从排查。</div></details><details><summary>安全合规</summary><div>很多行业中，信息是敏感资产，不管是线下训练数据还是线上推理数据，需要通过使用各种访问权限加以控制。而模型作为数据加工后的结果，天然携带数据的属性，极有可能通过使用模型来反推出数据内容。而模型的上线又有各种规范的约束，如果加工过程中缺乏合规意识，合规流程不完善，会导致产生的模型结果无法通过验证，导致推倒重来，所有努力付之东流。</div></details>
 
 # MLOps 系统工程
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408015026/0617310d-f68a-4b7e-acab-5d3abcaf887a.png align="left")
+![](./img/img-003.png)
 
 我们可以看出，机器学习工程全流程大致分为<mark>数据工程阶段</mark>，<mark>模型工程阶段</mark>和<mark>代码工程阶段</mark>。<mark>这几个阶段相互依赖，相互反馈，相互之间缺一不可，共同组成完整的流程来产生业务价值。</mark>
 
 MLOps 的概念中，将整个系统拆解为 DataOps， ModelOps 和 DevOps 三个部分。实际生产过程中，人们在自己的领域内已经有很多技术和组织尝试，这些尝试极大的解决了现有的问题。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408018800/76e4ef22-a934-4290-b019-d6ec7201a03c.png align="left")
+![](./img/img-004.png)
 
 ## DataOps
 
@@ -120,7 +120,7 @@ MLOps 的概念中，将整个系统拆解为 DataOps， ModelOps 和 DevOps 三
 
 <mark>特征库是一个存储与管理系统，用于保存特征的定义、计算逻辑和数值，</mark>以供数据科学家和工程师在机器学习项目中使用。特征库同时提供了一系列工具和接口，用于特征提取、转换、存储和查询。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408597987/7e66692f-ab41-4c88-b720-866e02db94c8.png align="left")
+![](./img/img-005.png)
 
 > [feast](https://feast.dev/) 作为市面上最火的[开源特征库](https://github.com/feast-dev/feast)，代表了特征库的典型功能范围和定义。它是前 google 工程师创立，维护者于 2020 年低加入 Tecton 团队，带领团队共同维护。 feast 解决了特征的存储，索引，与模型的关联关系，以及线上特征与线下特征的统一。
 
@@ -128,11 +128,11 @@ MLOps 的概念中，将整个系统拆解为 DataOps， ModelOps 和 DevOps 三
 
 <mark>特征平台是一个集成的系统，用于支持机器学习项目中特征工程的全流程。</mark>它包括特征库、数据处理和转换工具、API和查询接口等组件。特征平台的目标是简化特征工程，提高机器学习项目的开发速度和质量。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408604836/b0e787ad-f126-4422-8840-4194a2d3bac9.png align="left")
+![](./img/img-006.png)
 
 > [Hopsworks](https://github.com/logicalclocks/hopsworks) 是一个开源特征平台，由[瑞典的一家公司](https://www.hopsworks.ai/about-us)开发和维护。它的定位是一个以特征库为中心的机器学习平台，拥抱 MLOps 能力并提供标准化的解决方案。它提供云原生的部署方式，一键创建服务，按量收费。可以通过 Hopsworks 来管理特征，模型资产，开发和部署特征加工及训练流水线。Hopsworks 提供丰富的监控和管理能力来增加开发效率。 [little demo](https://c.app.hopsworks.ai/p/28823/view)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408911386/9bb6cd1b-d226-4482-9992-80fcffb9c6fc.png align="left")
+![](./img/img-007.png)
 
 > [Tecton](https://www.tecton.ai/) 是[一家加州旧金山的创业公司](https://www.crunchbase.com/organization/tecton)，提供[企业化特征平台 SaaS 服务](https://docs.tecton.ai/docs/introduction/tecton-concepts)。它通过整合特征库，特征工程和数据加工流水线，为特征提供全生命周期的管理和开发解决方案，一站式实现了特征的提取，加工，复用，拼接，解决了线上推理实时计算和时效性等问题。
 
@@ -178,13 +178,13 @@ MLOps 的概念中，将整个系统拆解为 DataOps， ModelOps 和 DevOps 三
 
 # MLOps 的价值和应用
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408697160/244efd1b-408b-4ac8-80a1-530ab27942bf.png align="left")
+![](./img/img-008.png)
 
 MLOps 有四个主要目标：<mark>1. 加速模型迭代，2. 提升模型质量，3. 确保模型安全合规，4. 增强团队协作。</mark>通过全面整合和追踪模型开发的设计、开发和部署运维环节，<mark>MLOps 将全流程串联起来，让数据和算法工程师更聚焦于自己的工作，不用担心合规和部署等问题。</mark>
 
 ## 全流程自动化
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408702415/1eacc04b-57e2-45b6-882b-6fba35d27f0f.png align="left")
+![](./img/img-009.png)
 
 MLOps 所提供的最大价值就是全流程的自动化，将全流程有机的结合起来。在传统的机器学习建模当中，几乎所有的事情都是由人工手动去完成的，无论是模型的迭代更新，线上发布还是错误回滚，所有的这些都需要人力来参与。 <mark>MLOps 尝试将整个流程标准化、组件化、配置化，并且通过 CI/CD 自动化流水线把所有的流程串联起来</mark>，以实现自动的数据采集与预处理，自动特征提取，自动模型结构与算法选择，自动调参，自动模型训练，自动模型验证与评估，自动模型部署与回滚，模型性能与效果持续监控。
 
@@ -194,23 +194,23 @@ MLOps 所提供的最大价值就是全流程的自动化，将全流程有机�
 
 MLOps 的自动化方案将此模型对应的数据采集、预处理、特征提取与特征工程的过程沉淀下来，将采集到的原始数据直接经过自动数据采集流水线加工成可以被模型直接使用的数据集。通过数据版本控制锁定最新的一批训练数据和验证数据。在触发器的控制下，在满足一定条件时，重训练流程会被自动触发。比如当线上模型的指标漂移程度达到一定的阈值时，自动重训练服务会寻找到数据中心中对应模型的最新训练集进行训练，并在训练好后自动使用最新的测试集和验证集进行测试和验证。如果通过验证则模型会被自动打包准备发布。自动化发布过程会控制模型服务进行灰度发布，并持续监控灰度发布过程中服务的推理速度，模型效果和请求成功率，一旦出现指标异常会触发自动回滚，将服务回退至原始版本，尽量将线上影响降到最低。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408711033/531e2512-b6ef-45e9-aa2a-7851e3dad375.png align="left")
+![](./img/img-010.png)
 
 > **MLflow** 是 Databricks 发布的一款开源一站式机器学习训练平台，其中的 [MLflow Recipes](https://mlflow.org/docs/latest/recipes.html) 功能提供了较为完整的自动重训练能力。[例子](https://github.com/mlflow/recipes-regression-template/blob/main/README.md)中基于 MLflow 提供的模型观测（MLflow Tracking）， 模型封装（MLflow Models）， 模型仓库（MLflow Model Registry）等能力，通过集成化的模型配方（MLflow Recipes）将各个步骤有机的结合起来。通过可自定义的流水线模板和步骤，将自动化的 MLOps 全流程串联起来，实现了自动化的重训练和部署。
 
 ## 团队协同与过程管理
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408723554/fc10bb11-6ad2-458f-8a1e-2feac0a6e2a6.png align="left")
+![](./img/img-011.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408730331/5e6b09b2-b637-46cf-b33f-28315059d5ca.png align="left")
+![](./img/img-012.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408735086/60365b79-861a-4fb4-811c-6be4e9e52f92.png align="left")
+![](./img/img-013.png)
 
 在人工智能项目的开发当中，涉及到多个团队的协同合作，其中因为信息孤岛等原因造成的信息理解偏差，需求无法对其，造作不当和原因不明，是不可避免的挑战。<mark>MLOps 提出了基于项目场景的管理方式，通过将端到端的开发验证，测试迭代等流程全部集中管理起来，一定程度上解决了同一项目中因为开团队协作导致的信息传递不畅带来的问题。</mark>而通过对实验过程的追踪，对数据血缘的记录，数据和算法工程师能够对建模过程中产生的问题进行回溯和追踪，更容易的定位到根源问题所在。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408746859/6b842cf6-6aa0-4ace-84cf-f7a924097067.png align="left")
+![](./img/img-014.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408752505/3fa4046c-ca9a-41e1-802c-39e0488fda23.png align="left")
+![](./img/img-015.png)
 
 > [**neptune.ai**](https://neptune.ai/)（[Youtube](https://www.youtube.com/@neptune_ai)）是[一家波兰的创业公司欧洲的创业公司](https://www.crunchbase.com/organization/neptune-ml)，其目标是建立实验的追踪系统，可以和 Notebook 进行深度的结合，对整个建模过程中做的操作和实验进行全流程记录，并通过横向和纵向对比以帮开发人员加快模型研发过程。（[UI Demo](https://www.youtube.com/watch?v=uYqT8aHsiQY&list=PLKePQLVx9tOd8TEGdG4PAKz0Owqdv1aaw&index=1)/ [XGBoost Example](https://www.youtube.com/watch?v=zZa350IUbWk&list=PLKePQLVx9tOd8TEGdG4PAKz0Owqdv1aaw&index=9)）
 
@@ -218,23 +218,23 @@ MLOps 的自动化方案将此模型对应的数据采集、预处理、特征�
 
 由于多个团队共同负责一个项目，项目中的每个人各司其职，其中数据工程师，算法工程师，软件工程师，运维工程师各自饰演着不同的角色，需要精细化的权限管理体系，对数据，模型，代码进行权限控制。对于整个研发流程来说，其中涉及到研发实验，测试验证，上线生产三个阶段。三个阶段虽然涉及到的数据，代码和模型非常类似，但其权限要求却大相径庭。 <mark>MLOps 提出通过对环境的隔离，账号的隔离，数据的隔离，代码的隔离来实现精细化的权限控制。</mark>在开发实验环境边界内给与开发者最大限度的自由，并且通过生产环境的精细化权限控制实现对线上服务和资产的保护。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408769395/7c16db5c-b8d7-43db-b1b4-977b743f1b6f.png align="left")
+![](./img/img-016.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682409907930/18f5be25-51b5-498a-88c8-662f340d8cda.png align="left")
+![](./img/img-017.png)
 
 > <mark>databricks</mark> 发布的关于 [mlops 的白皮书](https://www.databricks.com/resources/ebook/the-big-book-of-mlops)中提出了将研发环境分为 dev（开发），staging（测试），prod（生成）三个环境的思路。 不像传统的机器学习流程中通过传递打包好的模型来进行每一步的验收，<mark>databricks 提出把所有的代码当做产物来进行机器学习的交付。</mark>当开发人员在开发环境当中把数据处理，模型算法，软件开发的所有代码都自测验证好之后，直接把代码部署至测试环境中，用测试环境的数据和流程进行模型训练和验证，在测试环境当中完整的重新进行模型训练，封装，验证的全过程。而当测试环境的所有验证都做好之后，再将所有代码部署至正式环境，用正式环境的数据和硬件对模型进行训练和部署。这样做可以有效避免传统部署模型时因为研发环境与正式环境的数据不同而带来的模型效果不理想，但也对整个系统的标准化提出了非常大的要求。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408787824/ecdfd3c8-66f8-4502-81cc-8daeec6a01f8.png align="left")
+![](./img/img-018.png)
 
 > <mark>AWS</mark> 的架构师[在 2022 新西兰云计算峰会上分享的 MLOps 架构案例](https://www.youtube.com/watch?v=UnAN35gu3Rw)，详细描述了如何利用 AWS 的账号体系和组件，构建一个完整且灵活的 MLOps 架构。 方案中通过分别对比小型，中型，大型公司的使用需求，以 Amazon SageMaker 产品为核心，通过多账号体系管理不同团队，不同步骤，不同业务领域的资产和服务，进行实现流程的有机结合和权限隔离。
 
 ## 模型效果与性能监控
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408792858/b8d6e793-5a53-4b86-856a-abff0a812a3e.jpeg align="left")
+![](./img/img-019.jpeg)
 
 可观测性对于 DevOps 一直都是一个巨大的课题，而 MLOps 更是把这个课题的范围扩大到了模型和数据领域。随着自动化程度越来越高，流水线承担在整个系统中承担的任务也越来越重。一旦某个环节的自动化流程遇到了问题导致数据质量或模型质量不达标，在必然会导致整个系统后续的流程无法高质量的执行。此时对整个系统的质量观测就扮演了非常重要的角色。 <mark>MLOps 将指标的监控和观测作为反馈链路有机地融合进了自动化流程当中。</mark>在模型性能降低到一定的标准的时候会触发模型重训练，用最新的数据来更新模型，以符合最新的线上场景的业务需求。而数据质量和模型质量也是持续观测的目标，如模型的数据依赖发生结构上的变化，持续采集的数据出现了之前没处理到的异常值，模型推理吞吐量激增等问题都需要通过持续的监控来发现和定位。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682408800829/f4311deb-82d0-42d9-a839-a8179a4f58ae.png align="left")
+![](./img/img-020.png)
 
 > [**fiddler.ai**](https://www.fiddler.ai/ml-model-monitoring) 作为[硅谷的一家创业公司](https://www.crunchbase.com/organization/fiddler-labs)，提供了丰富的模型监控能力，[了解模型效果下降的根源，并通过全过程的监控增强了模型的可解释性](https://www.youtube.com/watch?v=PENnn3YUAcg)。
 
@@ -250,7 +250,7 @@ MLOps 的自动化方案将此模型对应的数据采集、预处理、特征�
 
 MLOps 依托于 DevOps，依赖云原生等技术实现模型服务的自动伸缩和拓展。通过集群算力的控制和服务负载的持续监控，系统能够做到在高峰流量来临时自动增加服务节点，提高服务的吞吐量，而在流量低谷通过平滑删除节点来节省算力和机器成本。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682428945109/7adc54aa-90a0-4e05-99a9-c34d4a9a3ef5.png align="center")
+![](./img/img-021.png)
 
 > [MetaFlow](https://docs.metaflow.org/) 是 Netflix 研发并开源的 python lib。它通过[统一的 api 将本地开发和云上部署统一起来](https://docs.metaflow.org/introduction/what-is-metaflow)，使得数据和算法工程师不必关心线上业务的工程部分，专心在数据和算法的开发上。通过底层逻辑和配置将软件架构[自动对接至云上](https://docs.metaflow.org/getting-started/infrastructure)，使得本地可调试的代码可低成本直接部署在云上进行验证和发布。
 
@@ -258,7 +258,7 @@ MLOps 依托于 DevOps，依赖云原生等技术实现模型服务的自动伸�
 
 MLOps 中通过对数据集，模型文件，训练脚本以及推理代码的版本控制，实现自动部署与回滚。<mark>在高自动化程度的系统中，通过统一的版本管理和调度，服务能够实现低成本，低风险，快速部署和验证。</mark>自动模型重训练和 A/B 测试都强依赖于版本控制来实现极大地研发速度提升。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682429021380/af845ce3-9bfe-44de-910d-aadf2e7831f8.png align="center")
+![](./img/img-022.png)
 
 > [DVC](https://dvc.org/) 是一个由 [iterative.ai](https://www.crunchbase.com/organization/iterative-ai) 维护的开源数据版本管理工具。它使用 dvc 命令生成数据描述文件 `.dvc`，通过 git 命令行像管理代码一样管理数据的变化过程。`.dvc` 文件中记录了数据文件的路径，大小，MD5等描述信息。 这个例子中展示了 `.dvc` 通过 dvc registry 记录[数据的存储位置](https://github.com/iterative/dataset-registry/blob/master/get-started/data.xml.dvc)，并通过 `.dvc` [文件](%28https://github.com/iterative/example-get-started/blob/main/data/data.xml.dvc%29)来关联和描述数据文件。
 
@@ -266,7 +266,7 @@ MLOps 中通过对数据集，模型文件，训练脚本以及推理代码的�
 
 基于自动化流水线，MLOps 流程中可以嵌入多种校验工具来保证数据质量和模型效果。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682429063782/d9a728c2-78f6-41ae-867f-589c3bcb0753.png align="center")
+![](./img/img-023.png)
 
 > [Great Expectations](https://greatexpectations.io/) 是一个基于 python 的数据校验工具，通过[简单的配置](https://docs.greatexpectations.io/docs/tutorials/quickstart/) Great Expectations 可以链接数据源和校验脚本，执行高效且快速的数据校验逻辑，以在数据入库前保证数据质量。
 

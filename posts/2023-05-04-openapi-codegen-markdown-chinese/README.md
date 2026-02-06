@@ -73,13 +73,13 @@ OpenAPI 规范有助于提高 API 设计的质量和一致性，降低开发和�
 
 [<mark>openapi-codegen-go</mark>](https://github.com/taylorzhangyx/openapi-codegen-go) <mark>提供了可运行的例子</mark>，将 OpenAPI3.0，oapi-codegen 和 widdershins 有机地结合起来，通过简单的指令生成可以直接基于 [gin](https://github.com/gin-gonic/gin) 框架运行的代码，并生成 client 和接口文档。
 
-[![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683214378635/ebecc783-79f9-429c-94b7-4819733bea1a.png align="center")](https://github.com/taylorzhangyx/openapi-codegen-go)
+[![](./img/img-001.png)](https://github.com/taylorzhangyx/openapi-codegen-go)
 
 ### 自定义模版
 
 通过简单修改模板，实现了中文文档的输出：[中文自定义模板](https://github.com/taylorzhangyx/openapi-codegen-go/commit/717d38b52fa500d5300a74f0afa21a885e645acf)
 
-[![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683212636345/7a6b028a-7fd6-4546-a8a2-e0d8fc816eda.png align="center")](https://github.com/taylorzhangyx/openapi-codegen-go/commit/717d38b52fa500d5300a74f0afa21a885e645acf)
+[![](./img/img-002.png)](https://github.com/taylorzhangyx/openapi-codegen-go/commit/717d38b52fa500d5300a74f0afa21a885e645acf)
 
 ### 开发环境调试插件
 
@@ -92,11 +92,11 @@ OpenAPI 的生态已经比较健全，在多个 IDE 上都有插件可以直接�
 
 如下图，可直接通过 IDE 中的插件来打开 OpenAPI 定义文件来直接对接口进行调试。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683212647935/01f0628a-b993-4f22-8ace-dd189ce8e603.png align="center")
+![](./img/img-003.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683212655737/cff3806d-38f5-4a82-aab0-87d9323bbcb6.png align="center")
+![](./img/img-004.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683212663041/b484123f-055c-4f03-99b1-4265507998bb.png align="center")
+![](./img/img-005.png)
 
 ---
 
