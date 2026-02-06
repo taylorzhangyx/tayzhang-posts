@@ -13,36 +13,36 @@ published: true
 本文包含如下几个部分：
 
 * MLOps 的定义 - MLOps是什么？
-    
+
 * 机器学习建模全生命周期介绍 - Machine Learning 流程是什么样的？
-    
+
 * MLOps 的价值 - MLOps 解决了什么问题？
-    
+
 
 # MLOps 的定义 - MLOps是什么？
 
 MLOps 还是一个相对来说比较新的概念。从 [Google 搜索指数](https://trends.google.com/trends/explore?date=today%205-y&q=mlops&hl=en)来看，2021 年后对于 MLOps 的关注度才有一个明显的上升，并一直在持续上涨。
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681787127307/b508c7fb-fa53-4504-97ee-287cb552d806.png align="center")
+![](./img/img-001.png)
 
 根据[维基百科](https://en.wikipedia.org/wiki/MLOps)和 [databricks](https://www.databricks.com/glossary/mlops) 的定义，<mark>MLOps （Machine Learning Operations）是一套基于实践的方法和工具，通过结合 DevOps、数据工程和机器学习等原则，执行持续集成与持续部署（CI/CD）的流程并对机器学习模型及相关数据进行恰当的监控、验证和管理，使数据科学家和机器学习工程师能够进行紧密合作，从而加速模型的开发部署过程并提升模型的质量。</mark>
 
 从定义中我们可以看到，MLOps 代指的是对机器学习模型生产全生命周期的方法论和工具的总和，其特点可以总结为以下几点：
 
 1. 自动化机器学习流程
-    
+
 2. 增强团队间的合作
-    
+
 3. 管理模型资产
-    
+
 4. 治理和保障模型安全
-    
+
 5. 确保生产流程的可复用可扩展
-    
+
 6. 全流程的版本管理
-    
+
 7. 保证数据、模型、工程质量
-    
+
 
 想要充分理解并应用 MLOps，首先要对机器学习建模流程有一个清晰完整的了解。
 
@@ -60,7 +60,7 @@ MLOps 还是一个相对来说比较新的概念。从 [Google 搜索指数](htt
 
 ## 机器学习一般流程总览
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681787149413/cced40da-078a-4a15-b618-83a0536b1c96.png align="center")
+![](./img/img-002.png)
 
 如上图所描绘的，ML 的整个流程可以分为三个大步骤：<mark>1.分析与理解业务场景及业务数据，2.选择和构建机器学习数据及模型，3.部署及维护机器学习模型服务</mark>。 三个步骤相辅相成，将<mark>业务，数据，模型，功能</mark>整合在一起，运用机器学习解决实际的业务问题，为业务带来价值。
 
@@ -176,9 +176,9 @@ MLOps 还是一个相对来说比较新的概念。从 [Google 搜索指数](htt
 
 机器学习是一个复杂的系统性工程，它通过多个团队的共同协作，同时使用和产生多种资源来为业务问题提供智能且低成本的解决方案。在带来价值的同时，机器学习流程中的困难显而易见。<mark>MLOps 通过多种工具和方法，在许多方面提升了机器学习建模流程的效率，缩短了周期，提升了模型和工程质量。</mark>
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681787172525/58453972-e31b-4d5d-8adc-49f450e6618c.jpeg align="center")
+![](./img/img-003.jpeg)
 
-<details data-node-type="hn-details-summary"><summary>自动化机器学习流程</summary><div data-type="detailsContent">自动化代表了一个工程系统的成熟程度，而机器学习系统作为一个极其复杂的工业系统，自动化是其必不可少的一环。MLOps 中通过标准化数据、模型、服务的流程，能够将如数据自动处理，模型自动训练与部署，服务自动扩容、回滚等功能落地至具体的机器学习系统中，节省大量的重复性劳动，避免人为疏忽导致的错误。</div></details><details data-node-type="hn-details-summary"><summary>增进团队间的合作</summary><div data-type="detailsContent">一个标准的机器学习流程，必然涉及至少 3 个团队：数据团队，模型团队以及工程团队。无论是 3-5 人的小团队还是 50-100 人的大团队，对于如何沟通协调任务，对齐业务目标，以及如何保证数据、模型、代码这些资产的一致性，都是极富挑战的事情。MLOps 提供了诸多工具和方法来减少人员交流当中的成本，能更好的明确责任归属，并且通过各种变更记录来明确根源问题所在。</div></details><details data-node-type="hn-details-summary"><summary>管理模型资产</summary><div data-type="detailsContent">模型作为整个机器学习流程最终的产物，是工作价值的呈现。而模型不仅包含了最终的模型文件，还包含着其生产前和投产后的一系列最佳实践，如训练模型所用的数据、特征，模型所包含的算法，参数列表，推理脚本，部署规则以及人员信息等。而模型的推理性能以及投产后的推理质量也需要作为模型的一部分来进行管理以便在发生漂移的时候及时进行感知和更新。</div></details><details data-node-type="hn-details-summary"><summary>治理和保障模型安全</summary><div data-type="detailsContent">在机器学习系统中，模型的安全性至关重要。MLOps 可以确保从模型训练到部署的整个过程都符合安全规范。通过对数据的权限管理、模型的访问控制和隐私保护措施，能够有效的降低安全风险。同时，通过对模型进行定期审计和漏洞扫描，可以确保模型在生命周期内的安全合规。</div></details><details data-node-type="hn-details-summary"><summary>确保生产流程的可复用可扩展</summary><div data-type="detailsContent">MLOps 通过对整个机器学习流程的标准化和自动化，有助于提高工程的复用性和扩展性。通过创建通用的模板和组件，可以在多个项目中方便复用，从而提高开发效率。同时，MLOps 提供了有弹性的基础设施和服务，可轻松扩展和升级系统，实现在异常情况下自动回滚。</div></details><details data-node-type="hn-details-summary"><summary>全流程的版本管理</summary><div data-type="detailsContent">机器学习全生命周期中涉及到非常丰富的资源，包括数据，特征，模型，配置，代码，文档，存储方式以及上线计划。这些所有的数据资产都是可以变化的，而任何的变化都有可能影响模型的效果甚至引发问题。而 MLOps 提供了丰富的工具来对全流程中大部分资产进行版本管理，且能够追踪变化的内容。这样可以确保在问题出现时，快速定位问题根源，进行回滚和修复。此外，版本管理有助于团队成员之间的协作，能够避免冲突和误操作。</div></details><details data-node-type="hn-details-summary"><summary>保证数据、模型、工程质量</summary><div data-type="detailsContent">机器学习模型的质量不仅依赖于模型的质量，更依赖于数据的质量和团队之间的配合。MLOps 通过提供自动化工具，最佳实践以及持续集成/持续部署（CI/CD）流程来确保可靠的数据质量、模型性能以及工程实践，减少人工错误。通过自动化的数据清洗、特征工程、模型验证和测试，可以确保项目的高质量输出。</div></details>
+<details><summary>自动化机器学习流程</summary><div>自动化代表了一个工程系统的成熟程度，而机器学习系统作为一个极其复杂的工业系统，自动化是其必不可少的一环。MLOps 中通过标准化数据、模型、服务的流程，能够将如数据自动处理，模型自动训练与部署，服务自动扩容、回滚等功能落地至具体的机器学习系统中，节省大量的重复性劳动，避免人为疏忽导致的错误。</div></details><details><summary>增进团队间的合作</summary><div>一个标准的机器学习流程，必然涉及至少 3 个团队：数据团队，模型团队以及工程团队。无论是 3-5 人的小团队还是 50-100 人的大团队，对于如何沟通协调任务，对齐业务目标，以及如何保证数据、模型、代码这些资产的一致性，都是极富挑战的事情。MLOps 提供了诸多工具和方法来减少人员交流当中的成本，能更好的明确责任归属，并且通过各种变更记录来明确根源问题所在。</div></details><details><summary>管理模型资产</summary><div>模型作为整个机器学习流程最终的产物，是工作价值的呈现。而模型不仅包含了最终的模型文件，还包含着其生产前和投产后的一系列最佳实践，如训练模型所用的数据、特征，模型所包含的算法，参数列表，推理脚本，部署规则以及人员信息等。而模型的推理性能以及投产后的推理质量也需要作为模型的一部分来进行管理以便在发生漂移的时候及时进行感知和更新。</div></details><details><summary>治理和保障模型安全</summary><div>在机器学习系统中，模型的安全性至关重要。MLOps 可以确保从模型训练到部署的整个过程都符合安全规范。通过对数据的权限管理、模型的访问控制和隐私保护措施，能够有效的降低安全风险。同时，通过对模型进行定期审计和漏洞扫描，可以确保模型在生命周期内的安全合规。</div></details><details><summary>确保生产流程的可复用可扩展</summary><div>MLOps 通过对整个机器学习流程的标准化和自动化，有助于提高工程的复用性和扩展性。通过创建通用的模板和组件，可以在多个项目中方便复用，从而提高开发效率。同时，MLOps 提供了有弹性的基础设施和服务，可轻松扩展和升级系统，实现在异常情况下自动回滚。</div></details><details><summary>全流程的版本管理</summary><div>机器学习全生命周期中涉及到非常丰富的资源，包括数据，特征，模型，配置，代码，文档，存储方式以及上线计划。这些所有的数据资产都是可以变化的，而任何的变化都有可能影响模型的效果甚至引发问题。而 MLOps 提供了丰富的工具来对全流程中大部分资产进行版本管理，且能够追踪变化的内容。这样可以确保在问题出现时，快速定位问题根源，进行回滚和修复。此外，版本管理有助于团队成员之间的协作，能够避免冲突和误操作。</div></details><details><summary>保证数据、模型、工程质量</summary><div>机器学习模型的质量不仅依赖于模型的质量，更依赖于数据的质量和团队之间的配合。MLOps 通过提供自动化工具，最佳实践以及持续集成/持续部署（CI/CD）流程来确保可靠的数据质量、模型性能以及工程实践，减少人工错误。通过自动化的数据清洗、特征工程、模型验证和测试，可以确保项目的高质量输出。</div></details>
 
 # 小结
 
@@ -203,11 +203,11 @@ taylorzyx@hotmail.com
 ## 参考资料
 
 1. [MLOps Principles](https://ml-ops.org/content/mlops-principles)
-    
+
 2. [MLOps phase-zero](https://ml-ops.org/content/phase-zero)
-    
+
 3. [Designing Machine Learning Systems by Chip Huyen](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)
-    
+
 4. [CRISP-ML(Q). The ML Lifecycle Process.](https://ml-ops.org/content/crisp-ml)
-    
+
 5. [Databricks - MLOps](https://www.databricks.com/glossary/mlops)

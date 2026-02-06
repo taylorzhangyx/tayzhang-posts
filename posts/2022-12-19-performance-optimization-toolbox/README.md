@@ -70,7 +70,7 @@ func MapLoopWithSize(pCycle interface{}) {
 
 Here are 4 functions that do the same thing using 4 different data structures: list, pre-allocated list, map, and pre-allocated map. By running these functions by passing 10,000,000 as input, we get the followings:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1670984959647/C0I_XEUJX.png align="center")
+![](./img/img-001.png)
 
 For lists, a pre-allocated list iterates a lot faster than a zero-sized list. The same conclusion can be applied to maps too. What happened under the hood is that as the list grows, the original fixed-sized array needs to be replaced by a bigger array to hold more items. So a memory allocation and copy happened when keep appending items into the list.
 
@@ -95,7 +95,7 @@ As we mentioned above, reusing instances can save re-creating costs. But by shar
 
 Here an <mark>object pool pattern</mark> can be applied to solve this issue.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671005470172/U0YNeWYUJ.png align="center")
+![](./img/img-002.png)
 
 The pool size controls the max number of objects in the application. When the number of object requests is bigger than the number of created objects and smaller than the size of the pool, a new object will be created to be added to the reuse cycle. And if the need for the object is larger than the size of the pool and the recycling can not fulfill the need of use, the request will be blocked. In this case, the pool plays the role of a request limiter to protect the application.
 
@@ -273,7 +273,7 @@ The [asynchronous Request-Reply pattern](https://learn.microsoft.com/en-us/azure
 
 > The following diagram shows a typical flow:
 > 
-> ![](https://learn.microsoft.com/en-us/azure/architecture/patterns/_images/async-request.png align="center")
+> ![](./img/img-003.png)
 > 
 > 1.  The client sends a request and receives an HTTP 202 (Accepted) response.
 >     
@@ -295,7 +295,7 @@ In general, this approach split the monolithic service into several lightly coup
 *   Result Holder - Keep and give the results of the processed tasks.
     
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671454653401/FZtdl-v2e.png align="center")
+![](./img/img-004.png)
 
 This approach trades the system complexity for stability and resilience. Other than that, [some issues](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply#issues-and-considerations) also are introduced and need to be taken care of:
 
