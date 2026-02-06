@@ -40,11 +40,20 @@ published: true
 
 ## Adding a New Post
 
+### Option 1: Write Markdown Directly
+
 1. Create a folder: `posts/YYYY-MM-DD-post-slug/`
 2. Add `README.md` with frontmatter and content
 3. Create `img/` folder for images (use relative paths: `./img/image.png`)
 4. Create `audio/` folder for audio files
 5. Use standard markdown syntax (avoid platform-specific extensions)
+
+### Option 2: Convert from PDF
+
+1. Place the finalized PDF in a working directory
+2. Use Claude Code to convert: extracts text, images, and generates markdown
+3. Review and edit the generated `README.md`
+4. Verify image references are correct
 
 ## Asset Guidelines
 
