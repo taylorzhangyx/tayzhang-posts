@@ -10,6 +10,7 @@ Each post is a self-contained folder:
 posts/
 ├── 2023-04-18-mlops-series-1-origin-what-why/
 │   ├── README.md      # Post content (markdown)
+│   ├── *.pdf          # Source PDF (if converted from PDF)
 │   ├── img/           # Images referenced in the post
 │   │   ├── img-001.png
 │   │   └── img-002.png
@@ -50,10 +51,11 @@ published: true
 
 ### Option 2: Convert from PDF
 
-1. Place the finalized PDF in a working directory
-2. Use Claude Code to convert: extracts text, images, and generates markdown
-3. Review and edit the generated `README.md`
-4. Verify image references are correct
+1. Create a folder: `posts/YYYY-MM-DD-post-slug/`
+2. Place the source PDF in the post folder for archival
+3. Use Claude Code to convert: extracts text, images, and generates markdown
+4. Review and edit the generated `README.md`
+5. Verify image references are correct
 
 ## Asset Guidelines
 
